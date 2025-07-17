@@ -79,7 +79,7 @@ class Program
                 break;
 
             default:
-                Console.WriteLine("Invalid choice. Please enter 1 or 2.");
+                Console.WriteLine("Invalid choice.");
                 break;
         }
     }
