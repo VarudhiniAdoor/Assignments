@@ -4,8 +4,10 @@
     {
         static void Main(string[] args)
         {
-            //SolutionQ1 q1 = new SolutionQ1();
-            //int[] A1 = { 1, 2, 3, 4, 5 };
+            SolutionQ1 q1 = new SolutionQ1();
+            int[] A1 = { 1, 2, 3, 4, 5 };
+            Console.WriteLine();
+
 
             SolutionQ2 q2 = new SolutionQ2();
             string multiplicationTable = q2.solution(1, 5, 1, 5);
