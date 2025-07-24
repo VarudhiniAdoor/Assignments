@@ -8,34 +8,39 @@ namespace Assignment10
 {
     internal static class NumberExtension
     {
-        public static void DisplayEven(this int start, int end)
+        public static string DisplayEven(this int start, int end)
         {
+            StringBuilder sb = new StringBuilder();
             for (int i = start; i <= end; i++)
                 if (Operation.IsEven(i))
-                    Console.Write(i + " ");
-            Console.WriteLine();
+                    sb.Append(i + " ");
+           return sb.ToString();
         }
 
-        public static void DisplayOdd(this int start, int end)
+        public static string DisplayOdd(this int start, int end)
         {
+            StringBuilder sb = new StringBuilder();
             for (int i = start; i <= end; i++)
                 if (Operation.IsOdd(i))
-                    Console.Write(i + " ");
-            Console.WriteLine();
+                    sb.Append(i + " ");
+            return sb.ToString();
         }
 
-        public static void DisplayPrimes(this int start, int end)
+        public static string DisplayPrimes(this int start, int end)
         {
+            StringBuilder sb = new StringBuilder();
             for (int i = start; i <= end; i++)
                 if (Operation.IsPrime(i))
-                    Console.Write(i + " ");
-            Console.WriteLine();
+                    sb.Append(i + " ");
+            return sb.ToString();
         }
 
-        public static void DisplayTable(this int number)
+        public static string DisplayTable(this int number)
         {
-            for (int i = 1; i <= 10; i++)
-                Console.WriteLine($"{number} x {i} = {number * i}");
+            StringBuilder sb = new StringBuilder();
+           for (int i = 1; i <= 10; i++)
+                sb.AppendLine($"{number} x {i} = {number * i}");
+           return sb.ToString();
         }
 
         public static void DisplayTables1To10(this int start, int end)
@@ -47,14 +52,16 @@ namespace Assignment10
             }
         }
 
-        public static void DisplayTablesInRange(this int tableStart, int tableEnd, int rangeStart, int rangeEnd)
+        public static string DisplayTablesInRange(this int tableStart, int tableEnd, int rangeStart, int rangeEnd)
         {
+            StringBuilder sb = new StringBuilder();
             for (int i = rangeStart; i <= rangeEnd; i++)
             {
                 Console.WriteLine($"\nTable for {i}:");
                 for (int j = tableStart; j <= tableEnd; j++)
-                    Console.WriteLine($"{i} x {j} = {i * j}");
+                    sb.AppendLine($"{i} x {j} = {i * j}");
             }
+            return sb.ToString();   
         }
 
         public static int ReverseNumber(this int number)
