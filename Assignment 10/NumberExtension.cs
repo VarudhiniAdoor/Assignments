@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment_10
+namespace Assignment10
 {
     internal static class NumberExtension
     {
