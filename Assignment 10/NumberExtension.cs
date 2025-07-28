@@ -43,13 +43,15 @@ namespace Assignment10
            return sb.ToString();
         }
 
-        public static void DisplayTables1To10(this int start, int end)
+        public static string DisplayTables1To10(this int start, int end)
         {
+            StringBuilder sb = new StringBuilder();
             for (int i = start; i <= end; i++)
             {
-                Console.WriteLine($"\nTable for {i}:");
-                i.DisplayTable();
+                sb.AppendLine($"\nTable for {i}:");
+                sb.AppendLine(i.DisplayTable());
             }
+            return sb.ToString();
         }
 
         public static string DisplayTablesInRange(this int tableStart, int tableEnd, int rangeStart, int rangeEnd)

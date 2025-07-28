@@ -65,10 +65,8 @@ namespace Assignment10
         public static string RemoveExtraSpaces(this string input)
         {
             input = input ?? "***";
-            string words = input.Trim();
-            //string[] words = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            //return string.Join(" ", words);
-            return words;
+            string[] words = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            return string.Join(" ", words);
         }
 
         public static int WordCount(this string input)
