@@ -41,7 +41,6 @@ namespace ClassLib11
             return true;
         }
 
-        // 10. Display all even numbers in range
         public static List<int> GetEvenInRange(int start, int end)
         {
             var result = new List<int>();
@@ -70,7 +69,7 @@ namespace ClassLib11
         {
             var result = new List<string>();
             for (int i = 1; i <= 10; i++)
-                result.Add($"{num} x {i} = {num * i}");
+                result.Add($" {num * i}");
             return result;
         }
 
